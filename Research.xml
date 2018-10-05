@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Research Automation Testing Release 1.19" verbose="5">
+   <parameter name="appURL" value="https://ae1c-bioinfocloud-slb01/auth/" />
+   <parameter name="browserType" value="chrome" />
+   <listeners>
+      <listener class-name="customListener.TestNGCustomReportListener" />
+      <listener class-name="customListener.Customreporter" />
+   </listeners>
+   <test name="TestNG Test Group">
+      <classes>
+      	<class name="testScript.Experiment_Scenarios" />
+      </classes>
+   </test>
+</suite>
+<!-- Suite -->

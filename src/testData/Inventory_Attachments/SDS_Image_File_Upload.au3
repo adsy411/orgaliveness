@@ -1,0 +1,6 @@
+ControlFocus("Open","","Edit1")
+Sleep(1000)
+ControlSetText("Open","","Edit1",@UserProfileDir&"\git\brightlab-qa-scripts\src\testData\Inventory_Attachments\SDS_Image_File_Upload.png")
+Sleep(1000)
+ControlClick("Open","","Button1")
+Sleep(1000)

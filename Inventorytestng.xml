@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Automation Testing for Platform module">
+<listeners>
+	<listener class-name="customListener.Listener"/>
+</listeners>
+  <test name="Platform Testing">
+    <classes>
+      <class name="testScript.Platform"/>
+    </classes>
+  </test> <!-- Test -->
+  <listeners>
+  <listener class-name="atu.testng.reports.listeners.ATUReportsListener"></listener>
+  <listener class-name="atu.testng.reports.listeners.ConfigurationListener"></listener>
+  <listener class-name="atu.testng.reports.listeners.MethodListener"></listener>
+  </listeners>
+</suite> <!-- Suite -->

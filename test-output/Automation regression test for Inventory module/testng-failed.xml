@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Automation regression test for Inventory module]">
+  <listeners>
+    <listener class-name="atu.testng.reports.listeners.ATUReportsListener"/>
+    <listener class-name="atu.testng.reports.listeners.ConfigurationListener"/>
+    <listener class-name="atu.testng.reports.listeners.MethodListener"/>
+  </listeners>
+  <test name="Inventory Regression Test(failed)">
+    <classes>
+      <class name="testScript.InventoryAndEHS">
+        <methods>
+          <include name="MessageValidationMaterialsPage_Action"/>
+          <include name="ScheduleEquipment"/>
+          <include name="EditHomegrownMaterial"/>
+          <include name="AddVendorMaterial"/>
+          <include name="AddHomegrown"/>
+          <include name="EditVendorMaterial"/>
+          <include name="AddEquipment"/>
+          <include name="EditEquipment"/>
+        </methods>
+      </class> <!-- testScript.InventoryAndEHS -->
+    </classes>
+  </test> <!-- Inventory Regression Test(failed) -->
+</suite> <!-- Failed suite [Automation regression test for Inventory module] -->

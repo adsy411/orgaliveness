@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Inventory Automation Testing for Release 1.19" verbose="5">
+<parameter name="appURL" value="https://ae1c-bioinfocloud-slb01/auth/"/>
+<parameter name="browserType" value="chrome"/>
+    <listeners>
+        <listener class-name="customListener.TestNGCustomReportListener"></listener>
+        <listener class-name="customListener.Customreporter" />
+    </listeners>
+     <test name="Inventory - Add Material Page - Automation Scripts Execution - Chrome Browser ">
+        <classes>
+            <class name="testScript.Inventory_Add_Material_Page_Suite" />
+        </classes>
+  	</test> <!-- Test -->
+  	 <test name="Inventory - Material Card View Page - Automation Scripts Execution - Chrome Browser ">
+        <classes>
+            <class name="testScript.Inventory_Material_Card_Page_Suite" />
+        </classes>
+  	</test> <!-- Test -->
+  	
+  	<test name="Inventory - Material List View Page - Automation Scripts Execution - Chrome Browser ">
+        <classes>
+            <class name="testScript.Inventory_Material_List_Page_Suite" />
+        </classes>
+  	</test> <!-- Test -->
+  	
+  	<test name="Inventory - Material Detail Page - Automation Scripts Execution - Chrome Browser ">
+        <classes>
+            <class name="testScript.Inventory_Material_Detail_Page_Suite" />
+        </classes>
+  	</test> <!-- Test -->
+  	
+  	<test name="Inventory - Lab Member Functions - Automation Scripts Execution - Chrome Browser ">
+        <classes>
+            <class name="testScript.Inventory_Lab_Member_Functions_Suite" />
+        </classes>
+  	</test> <!-- Test -->
+  	
+  	<test name="Inventory Error And Validation - Automation Scripts Execution - Chrome Browser ">
+        <classes>
+            <class name="testScript.Inventory_Error_And_Validation_Scenarios_Suite" />
+        </classes>
+  	</test> <!-- Test -->
+  	
+  	<test name="Inventory - Storage Suite - Automation Scripts Execution - Chrome Browser ">
+        <classes>
+            <class name="testScript.Storage_Suite" />
+        </classes>
+  	</test> <!-- Test -->
+</suite> <!-- Suite -->

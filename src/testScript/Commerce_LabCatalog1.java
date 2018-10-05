@@ -1,0 +1,42 @@
+package testScript;
+
+import org.testng.annotations.Test;
+
+import labCatalog.AddNonSigmaAldrichProducttoCatalog;
+import labCatalog.AddSigmaAldrichProducttoCatalog_Old;
+import labCatalog.DashboardActivity_EditQuantity_Negative;
+import labCatalog.DashboardActivity_EditQuantity_Positive;
+import labCatalog.DashboardActivity_Request_NoNSigmaAldrichProduct;
+import labCatalog.DashboardActivity_Request_SigmaAldrichProduct;
+import labCatalog.Delete_NonSigmaAldrichProduct_FromLabCatalog;
+import labCatalog.Delete_SigmaAldrichProduct_FromLabCatalog;
+import labCatalog.Editing_NonSigmaAldrichProduct_From_LabCatalog_as_LabOwner_Member_Manager;
+import labCatalog.Enable_Editing_Of_The_Lab_Catalog_By_The_Lab_Member_Action;
+import labCatalog.LabManagerDefaultApproverProcurer_Action;
+import labCatalog.Request_NonSigmaAldrichProduct_FromLabCatalog;
+import labCatalog.Request_SigmaAldrichProduct_FromLabCatalog;
+import stockroomUserManagement.InviteStkroomMembersThroughBatchUpload_Action;
+import stockroomUserManagement.InviteStockroomLeadAndUser_Action;
+import stockroomUserManagement.LoginAsStockroomAdmin_Action;
+import stockroomUserManagement.StkRoomAdminMemberListFunctionality_Action;
+import stockroomUserManagement.VerifyContactUs_Action;
+import stockroomUserManagement.VerifyStockroomName_Action;
+import testBase.TestBase;
+
+public class Commerce_LabCatalog1 extends TestBase{
+	
+	
+	
+	
+	
+	@Test(priority = 16)
+	public void RequestSigmaAldrichProductfromCatalogAsLabOwner16() throws Exception{
+		Request_SigmaAldrichProduct_FromLabCatalog Av = new Request_SigmaAldrichProduct_FromLabCatalog();
+		Av.Add_New_SigmaAldrich_Product_to_Catalog_as_LabOwner_and_RequestProduct();
+	
+	}
+	
+	
+	
+	
+}

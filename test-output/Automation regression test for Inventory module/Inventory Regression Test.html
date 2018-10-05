@@ -1,0 +1,987 @@
+<html>
+<head>
+<title>TestNG:  Inventory Regression Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Inventory Regression Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>2/8/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jun 28 16:31:38 IST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>495 seconds (495387 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScript.InventoryAndEHS.AddEquipment()'><b>AddEquipment</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-1689730682" onClick='toggleBox("Output-1689730682", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1689730682" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1689730682">
+Login to Application<br/>
+MouseOver to Inventory -> Equipment<br/>
+Navigate to Add Equipment<br/>
+Verify the Fields with Validation<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;tmptree&apos;]/ul/li/ul/li/a&quot;}
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 9a2299d3-3e5c-40f6-9baa-8ec9ef196cd4
+*** Element info: {Using=xpath, value=.//*[@id=&apos;tmptree&apos;]/ul/li/ul/li/a}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at inventoryModule.AddEquipment_Action.AddEqip(AddEquipment_Action.java:61)
+	at testScript.InventoryAndEHS.AddEquipment(InventoryAndEHS.java:182)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;tmptree&apos;]/ul/li/ul/li/a&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3808884217208763469webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3808884217208763469webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1689730682", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1689730682'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;tmptree&apos;]/ul/li/ul/li/a&quot;}
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 9a2299d3-3e5c-40f6-9baa-8ec9ef196cd4
+*** Element info: {Using=xpath, value=.//*[@id=&apos;tmptree&apos;]/ul/li/ul/li/a}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at inventoryModule.AddEquipment_Action.AddEqip(AddEquipment_Action.java:61)
+	at testScript.InventoryAndEHS.AddEquipment(InventoryAndEHS.java:182)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;tmptree&apos;]/ul/li/ul/li/a&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3808884217208763469webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3808884217208763469webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>61</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.AddHomegrown()'><b>AddHomegrown</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-806813022" onClick='toggleBox("Output-806813022", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-806813022" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-806813022">
+Login to Application<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fe306973-4258-4706-918e-7a16bc3253fc
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.AddHomegrownMaterial_Action.AddHomGro(AddHomegrownMaterial_Action.java:31)
+	at testScript.InventoryAndEHS.AddHomegrown(InventoryAndEHS.java:213)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous2507970479313644975webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous2507970479313644975webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace806813022", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace806813022'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: fe306973-4258-4706-918e-7a16bc3253fc
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.AddHomegrownMaterial_Action.AddHomGro(AddHomegrownMaterial_Action.java:31)
+	at testScript.InventoryAndEHS.AddHomegrown(InventoryAndEHS.java:213)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous2507970479313644975webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous2507970479313644975webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>40</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.AddVendorMaterial()'><b>AddVendorMaterial</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-589987187" onClick='toggleBox("Output-589987187", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-589987187" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-589987187">
+Login to Application<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a60f4000-93bd-4a27-8ae3-4918345ec21c
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.AddVendorMaterial_Action.AddVenMat(AddVendorMaterial_Action.java:30)
+	at testScript.InventoryAndEHS.AddVendorMaterial(InventoryAndEHS.java:201)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous5701924414062200950webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous5701924414062200950webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace589987187", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace589987187'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.10 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a60f4000-93bd-4a27-8ae3-4918345ec21c
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.AddVendorMaterial_Action.AddVenMat(AddVendorMaterial_Action.java:30)
+	at testScript.InventoryAndEHS.AddVendorMaterial(InventoryAndEHS.java:201)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous5701924414062200950webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous5701924414062200950webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>42</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.EditEquipment()'><b>EditEquipment</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-711197015" onClick='toggleBox("Output-711197015", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-711197015" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-711197015">
+Login to Application<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f2fec805-e621-41b5-b4cf-a097ef94829d
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.EditEquipment_Action.EditEquipment(EditEquipment_Action.java:30)
+	at testScript.InventoryAndEHS.EditEquipment(InventoryAndEHS.java:188)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3979873257555685561webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3979873257555685561webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace711197015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace711197015'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.06 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f2fec805-e621-41b5-b4cf-a097ef94829d
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.EditEquipment_Action.EditEquipment(EditEquipment_Action.java:30)
+	at testScript.InventoryAndEHS.EditEquipment(InventoryAndEHS.java:188)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3979873257555685561webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous3979873257555685561webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>40</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.EditHomegrownMaterial()'><b>EditHomegrownMaterial</b><br>Test class: testScript.InventoryAndEHS</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7062; process output follows: 
+474-a285-3208198ce6fd}
+1498648147000	addons.xpi	DEBUG	Updating XPIState for {&quot;id&quot;:&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;,&quot;syncGUID&quot;:&quot;TgFQcX27ES33&quot;,&quot;location&quot;:&quot;winreg-app-global&quot;,&quot;version&quot;:&quot;IDS_SS_VERSION&quot;,&quot;type&quot;:&quot;extension&quot;,&quot;internalName&quot;:null,&quot;updateURL&quot;:null,&quot;updateKey&quot;:null,&quot;optionsURL&quot;:null,&quot;optionsType&quot;:null,&quot;aboutURL&quot;:null,&quot;icons&quot;:{},&quot;iconURL&quot;:&quot;chrome://vscore/content/ScriptFF.gif&quot;,&quot;icon64URL&quot;:null,&quot;defaultLocale&quot;:{&quot;name&quot;:&quot;IDS_SS_NAME&quot;,&quot;description&quot;:null,&quot;creator&quot;:&quot;McAfee, Inc.&quot;,&quot;homepageURL&quot;:null},&quot;visible&quot;:true,&quot;active&quot;:false,&quot;userDisabled&quot;:true,&quot;appDisabled&quot;:false,&quot;descriptor&quot;:&quot;C:\\Program Files (x86)\\Common Files\\McAfee\\SystemCore&quot;,&quot;installDate&quot;:1463634509259,&quot;updateDate&quot;:1463634509259,&quot;applyBackgroundUpdates&quot;:1,&quot;bootstrap&quot;:false,&quot;skinnable&quot;:false,&quot;size&quot;:3262238,&quot;sourceURI&quot;:null,&quot;releaseNotesURI&quot;:null,&quot;softDisabled&quot;:false,&quot;foreignInstall&quot;:true,&quot;hasBinaryComponents&quot;:false,&quot;strictCompatibility&quot;:false,&quot;locales&quot;:[],&quot;targetApplications&quot;:[{&quot;id&quot;:&quot;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&quot;,&quot;minVersion&quot;:&quot;1.5&quot;,&quot;maxVersion&quot;:&quot;9.9&quot;}],&quot;targetPlatforms&quot;:[],&quot;multiprocessCompatible&quot;:false,&quot;signedState&quot;:0,&quot;seen&quot;:true}
+1498648147001	DeferredSave.extensions.json	DEBUG	Save changes
+1498648147001	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1498648147001	addons.xpi-utils	DEBUG	Updating add-on states
+1498648147006	addons.xpi-utils	DEBUG	Writing add-ons list
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1498648147046	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1498648147047	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0
+1498648147048	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1498648147048	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.2.6
+1498648147063	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1498648147064	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1498648147064	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Starting provider: GMPProvider
+1498648147069	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1498648147069	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1498648147070	addons.manager	DEBUG	Starting provider: PluginProvider
+1498648147070	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1498648147070	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1498648147070	addons.manager	DEBUG	Completed startup sequence
+1498648147912	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1498648147914	DeferredSave.extensions.json	DEBUG	Starting write
+1498648148077	addons.repository	DEBUG	No addons.json found.
+1498648148077	DeferredSave.addons.json	DEBUG	Save changes
+1498648148080	DeferredSave.addons.json	DEBUG	Starting timer
+1498648148123	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1498648148123	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1498648148124	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1498648148125	DeferredSave.extensions.json	DEBUG	Write succeeded
+1498648148126	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1498648148131	DeferredSave.addons.json	DEBUG	Starting write
+1498648148143	DeferredSave.addons.json	DEBUG	Write succeeded
+
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:124)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:119)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:218)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:211)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+	at utills.Utills.SelectBrowser(Utills.java:37)
+	at testBase.TestBase.init(TestBase.java:30)
+	at inventoryModule.EditHomegrownMaterial_Action.EditHomegrownMaterial(EditHomegrownMaterial_Action.java:25)
+	at testScript.InventoryAndEHS.EditHomegrownMaterial(InventoryAndEHS.java:219)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7062 after 45000 ms. Firefox console output:
+474-a285-3208198ce6fd}
+1498648147000	addons.xpi	DEBUG	Updating XPIState for {&quot;id&quot;:&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;,&quot;syncGUID&quot;:&quot;TgFQcX27ES33&quot;,&quot;location&quot;:&quot;winreg-app-global&quot;,&quot;version&quot;:&quot;IDS_SS_VERSION&quot;,&quot;type&quot;:&quot;extension&quot;,&quot;internalName&quot;:null,&quot;updateURL&quot;:null,&quot;updateKey&quot;:null,&quot;optionsURL&quot;:null,&quot;optionsType&quot;:null,&quot;aboutURL&quot;:null,&quot;icons&quot;:{},&quot;iconURL&quot;:&quot;chrome://vscore/content/ScriptFF.gif&quot;,&quot;icon64URL&quot;:null,&quot;defaultLocale&quot;:{&quot;name&quot;:&quot;IDS_SS_NAME&quot;,&quot;description&quot;:null,&quot;creator&quot;:&quot;McAfee, Inc.&quot;,&quot;homepageURL&quot;:null},&quot;visible&quot;:true,&quot;active&quot;:false,&quot;userDisabled&quot;:true,&quot;appDisabled&quot;:false,&quot;descriptor&quot;:&quot;C:\\Program Files (x86)\\Common Files\\McAfee\\SystemCore&quot;,&quot;installDate&quot;:1463634509259,&quot;updateDate&quot;:1463634509259,&quot;applyBackgroundUpdates&quot;:1,&quot;bootstrap&quot;:false,&quot;skinnable&quot;:false,&quot;size&quot;:3262238,&quot;sourceURI&quot;:null,&quot;releaseNotesURI&quot;:null,&quot;softDisabled&quot;:false,&quot;foreignInstall&quot;:true,&quot;hasBinaryComponents&quot;:false,&quot;strictCompatibility&quot;:false,&quot;locales&quot;:[],&quot;targetApplications&quot;:[{&quot;id&quot;:&quot;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&quot;,&quot;minVersion&quot;:&quot;1.5&quot;,&quot;maxVersion&quot;:&quot;9.9&quot;}],&quot;targetPlatforms&quot;:[],&quot;multiprocessCompatible&quot;:false,&quot;signedState&quot;:0,&quot;seen&quot;:true}
+1498648147001	DeferredSave.extensions.json	DEBUG	Save changes
+1498648147001	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1498648147001	addons.xpi-utils	DEBUG	Updating add-on states
+1498648147006	addons.xpi-utils	DEBUG	Writing add-ons list
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1498648147046	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1498648147047	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0
+1498648147048	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1498648147048	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.2.6
+1498648147063	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1498648147064	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1498648147064	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Starting provider: GMPProvider
+1498648147069	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1498648147069	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1498648147070	addons.manager	DEBUG	Starting provider: PluginProvider
+1498648147070	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1498648147070	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1498648147070	addons.manager	DEBUG	Completed startup sequence
+1498648147912	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1498648147914	DeferredSave.extensions.json	DEBUG	Starting write
+1498648148077	addons.repository	DEBUG	No addons.json found.
+1498648148077	DeferredSave.addons.json	DEBUG	Save changes
+1498648148080	DeferredSave.addons.json	DEBUG	Starting timer
+1498648148123	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1498648148123	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1498648148124	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1498648148125	DeferredSave.extensions.json	DEBUG	Write succeeded
+1498648148126	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1498648148131	DeferredSave.addons.json	DEBUG	Starting write
+1498648148143	DeferredSave.addons.json	DEBUG	Write succeeded
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+	... 33 more
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1925352804", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1925352804'><pre>org.openqa.selenium.WebDriverException: Failed to connect to binary FirefoxBinary(C:\Program Files (x86)\Mozilla Firefox\firefox.exe) on port 7062; process output follows: 
+474-a285-3208198ce6fd}
+1498648147000	addons.xpi	DEBUG	Updating XPIState for {&quot;id&quot;:&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;,&quot;syncGUID&quot;:&quot;TgFQcX27ES33&quot;,&quot;location&quot;:&quot;winreg-app-global&quot;,&quot;version&quot;:&quot;IDS_SS_VERSION&quot;,&quot;type&quot;:&quot;extension&quot;,&quot;internalName&quot;:null,&quot;updateURL&quot;:null,&quot;updateKey&quot;:null,&quot;optionsURL&quot;:null,&quot;optionsType&quot;:null,&quot;aboutURL&quot;:null,&quot;icons&quot;:{},&quot;iconURL&quot;:&quot;chrome://vscore/content/ScriptFF.gif&quot;,&quot;icon64URL&quot;:null,&quot;defaultLocale&quot;:{&quot;name&quot;:&quot;IDS_SS_NAME&quot;,&quot;description&quot;:null,&quot;creator&quot;:&quot;McAfee, Inc.&quot;,&quot;homepageURL&quot;:null},&quot;visible&quot;:true,&quot;active&quot;:false,&quot;userDisabled&quot;:true,&quot;appDisabled&quot;:false,&quot;descriptor&quot;:&quot;C:\\Program Files (x86)\\Common Files\\McAfee\\SystemCore&quot;,&quot;installDate&quot;:1463634509259,&quot;updateDate&quot;:1463634509259,&quot;applyBackgroundUpdates&quot;:1,&quot;bootstrap&quot;:false,&quot;skinnable&quot;:false,&quot;size&quot;:3262238,&quot;sourceURI&quot;:null,&quot;releaseNotesURI&quot;:null,&quot;softDisabled&quot;:false,&quot;foreignInstall&quot;:true,&quot;hasBinaryComponents&quot;:false,&quot;strictCompatibility&quot;:false,&quot;locales&quot;:[],&quot;targetApplications&quot;:[{&quot;id&quot;:&quot;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&quot;,&quot;minVersion&quot;:&quot;1.5&quot;,&quot;maxVersion&quot;:&quot;9.9&quot;}],&quot;targetPlatforms&quot;:[],&quot;multiprocessCompatible&quot;:false,&quot;signedState&quot;:0,&quot;seen&quot;:true}
+1498648147001	DeferredSave.extensions.json	DEBUG	Save changes
+1498648147001	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1498648147001	addons.xpi-utils	DEBUG	Updating add-on states
+1498648147006	addons.xpi-utils	DEBUG	Writing add-ons list
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1498648147046	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1498648147047	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0
+1498648147048	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1498648147048	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.2.6
+1498648147063	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1498648147064	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1498648147064	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Starting provider: GMPProvider
+1498648147069	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1498648147069	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1498648147070	addons.manager	DEBUG	Starting provider: PluginProvider
+1498648147070	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1498648147070	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1498648147070	addons.manager	DEBUG	Completed startup sequence
+1498648147912	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1498648147914	DeferredSave.extensions.json	DEBUG	Starting write
+1498648148077	addons.repository	DEBUG	No addons.json found.
+1498648148077	DeferredSave.addons.json	DEBUG	Save changes
+1498648148080	DeferredSave.addons.json	DEBUG	Starting timer
+1498648148123	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1498648148123	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1498648148124	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1498648148125	DeferredSave.extensions.json	DEBUG	Write succeeded
+1498648148126	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1498648148131	DeferredSave.addons.json	DEBUG	Starting write
+1498648148143	DeferredSave.addons.json	DEBUG	Write succeeded
+
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: FirefoxDriver
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:124)
+	at org.openqa.selenium.firefox.FirefoxDriver.startClient(FirefoxDriver.java:271)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:119)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:218)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:211)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:207)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:120)
+	at utills.Utills.SelectBrowser(Utills.java:37)
+	at testBase.TestBase.init(TestBase.java:30)
+	at inventoryModule.EditHomegrownMaterial_Action.EditHomegrownMaterial(EditHomegrownMaterial_Action.java:25)
+	at testScript.InventoryAndEHS.EditHomegrownMaterial(InventoryAndEHS.java:219)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.firefox.NotConnectedException: Unable to connect to host 127.0.0.1 on port 7062 after 45000 ms. Firefox console output:
+474-a285-3208198ce6fd}
+1498648147000	addons.xpi	DEBUG	Updating XPIState for {&quot;id&quot;:&quot;{D19CA586-DD6C-4a0a-96F8-14644F340D60}&quot;,&quot;syncGUID&quot;:&quot;TgFQcX27ES33&quot;,&quot;location&quot;:&quot;winreg-app-global&quot;,&quot;version&quot;:&quot;IDS_SS_VERSION&quot;,&quot;type&quot;:&quot;extension&quot;,&quot;internalName&quot;:null,&quot;updateURL&quot;:null,&quot;updateKey&quot;:null,&quot;optionsURL&quot;:null,&quot;optionsType&quot;:null,&quot;aboutURL&quot;:null,&quot;icons&quot;:{},&quot;iconURL&quot;:&quot;chrome://vscore/content/ScriptFF.gif&quot;,&quot;icon64URL&quot;:null,&quot;defaultLocale&quot;:{&quot;name&quot;:&quot;IDS_SS_NAME&quot;,&quot;description&quot;:null,&quot;creator&quot;:&quot;McAfee, Inc.&quot;,&quot;homepageURL&quot;:null},&quot;visible&quot;:true,&quot;active&quot;:false,&quot;userDisabled&quot;:true,&quot;appDisabled&quot;:false,&quot;descriptor&quot;:&quot;C:\\Program Files (x86)\\Common Files\\McAfee\\SystemCore&quot;,&quot;installDate&quot;:1463634509259,&quot;updateDate&quot;:1463634509259,&quot;applyBackgroundUpdates&quot;:1,&quot;bootstrap&quot;:false,&quot;skinnable&quot;:false,&quot;size&quot;:3262238,&quot;sourceURI&quot;:null,&quot;releaseNotesURI&quot;:null,&quot;softDisabled&quot;:false,&quot;foreignInstall&quot;:true,&quot;hasBinaryComponents&quot;:false,&quot;strictCompatibility&quot;:false,&quot;locales&quot;:[],&quot;targetApplications&quot;:[{&quot;id&quot;:&quot;{ec8030f7-c20a-464f-9b0e-13a3a9e97384}&quot;,&quot;minVersion&quot;:&quot;1.5&quot;,&quot;maxVersion&quot;:&quot;9.9&quot;}],&quot;targetPlatforms&quot;:[],&quot;multiprocessCompatible&quot;:false,&quot;signedState&quot;:0,&quot;seen&quot;:true}
+1498648147001	DeferredSave.extensions.json	DEBUG	Save changes
+1498648147001	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1498648147001	addons.xpi-utils	DEBUG	Updating add-on states
+1498648147006	addons.xpi-utils	DEBUG	Writing add-ons list
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1498648147046	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1498648147046	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1498648147047	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0
+1498648147048	addons.xpi	DEBUG	Registering manifest for C:\Program Files (x86)\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1498648147048	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.2.6
+1498648147063	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1498648147064	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1498648147064	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1498648147064	addons.manager	DEBUG	Starting provider: GMPProvider
+1498648147069	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1498648147069	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1498648147070	addons.manager	DEBUG	Starting provider: PluginProvider
+1498648147070	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1498648147070	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1498648147070	addons.manager	DEBUG	Completed startup sequence
+1498648147912	addons.manager	DEBUG	Starting provider: &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Registering shutdown blocker for &lt;unnamed-provider&gt;
+1498648147912	addons.manager	DEBUG	Provider finished startup: &lt;unnamed-provider&gt;
+1498648147914	DeferredSave.extensions.json	DEBUG	Starting write
+1498648148077	addons.repository	DEBUG	No addons.json found.
+1498648148077	DeferredSave.addons.json	DEBUG	Save changes
+1498648148080	DeferredSave.addons.json	DEBUG	Starting timer
+1498648148123	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1498648148123	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1498648148124	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1498648148125	DeferredSave.extensions.json	DEBUG	Write succeeded
+1498648148126	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1498648148131	DeferredSave.addons.json	DEBUG	Starting write
+1498648148143	DeferredSave.addons.json	DEBUG	Write succeeded
+
+	at org.openqa.selenium.firefox.internal.NewProfileExtensionConnection.start(NewProfileExtensionConnection.java:112)
+	... 33 more
+</pre></div></td>
+<td>49</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.EditVendorMaterial()'><b>EditVendorMaterial</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-873175411" onClick='toggleBox("Output-873175411", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-873175411" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-873175411">
+Login to Application<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6eedff71-4b9c-4d2f-899c-feaff224eab8
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.EditVendorMaterial_Action.EditVendorMaterial(EditVendorMaterial_Action.java:30)
+	at testScript.InventoryAndEHS.EditVendorMaterial(InventoryAndEHS.java:207)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous4541347048172480202webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous4541347048172480202webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace873175411", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace873175411'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 6eedff71-4b9c-4d2f-899c-feaff224eab8
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.EditVendorMaterial_Action.EditVendorMaterial(EditVendorMaterial_Action.java:30)
+	at testScript.InventoryAndEHS.EditVendorMaterial(InventoryAndEHS.java:207)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous4541347048172480202webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous4541347048172480202webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>39</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.MessageValidationMaterialsPage_Action()'><b>MessageValidationMaterialsPage_Action</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-1681303515" onClick='toggleBox("Output-1681303515", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1681303515" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1681303515">
+Login to Application<br/>
+MouseOver to Inventory -> Material<br/>
+Verify Validation Message for Search materials not available<br/>
+Test Completed on Verifying Validation Message for Search materials not available<br/>
+Verify Error Message when Barcode field is empty<br/>
+Test Completed on verifying error message for empty Barcode field<br/>
+Test Completed on Verifying Validation Message for Barcode<br/>
+Verify Validation Message for Select Vendor<br/>
+Test Completed on Verifying Validation Message for Select Vendor<br/>
+Verify Validation Message for Product name<br/>
+Test Completed on Verifying Validation Message for Product name<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Timed out after 5 seconds waiting for visibility of element located by By.xpath: html/body/div[11]/div/div/div/div[1]
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f4331cc4-9fc9-4337-be5a-c777280cded6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at inventoryModule.MessageValidationMaterialsPage.MessValMaterial(MessageValidationMaterialsPage.java:156)
+	at testScript.InventoryAndEHS.MessageValidationMaterialsPage_Action(InventoryAndEHS.java:175)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1681303515", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1681303515'><pre>org.openqa.selenium.TimeoutException: Timed out after 5 seconds waiting for visibility of element located by By.xpath: html/body/div[11]/div/div/div/div[1]
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: f4331cc4-9fc9-4337-be5a-c777280cded6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:261)
+	at inventoryModule.MessageValidationMaterialsPage.MessValMaterial(MessageValidationMaterialsPage.java:156)
+	at testScript.InventoryAndEHS.MessageValidationMaterialsPage_Action(InventoryAndEHS.java:175)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+</pre></div></td>
+<td>80</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.ScheduleEquipment()'><b>ScheduleEquipment</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-909132503" onClick='toggleBox("Output-909132503", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-909132503" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-909132503">
+Login to Application<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a125a31e-0842-4a72-8e4c-8a56dfd585cc
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.ScheduleEquipment_Action.ScheduleEquipment(ScheduleEquipment_Action.java:32)
+	at testScript.InventoryAndEHS.ScheduleEquipment(InventoryAndEHS.java:194)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous6444248218952708141webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous6444248218952708141webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace909132503", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace909132503'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+Command duration or timeout: 20.11 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=46.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: a125a31e-0842-4a72-8e4c-8a56dfd585cc
+*** Element info: {Using=xpath, value=.//*[@id=&apos;labs-sidebar&apos;]/div[3]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at testBase.TestBase.getLocator(TestBase.java:83)
+	at testBase.TestBase.getWebElement(TestBase.java:89)
+	at pageLibrary.MouseOver.InventoryMouseOver(MouseOver.java:15)
+	at inventoryModule.ScheduleEquipment_Action.ScheduleEquipment(ScheduleEquipment_Action.java:32)
+	at testScript.InventoryAndEHS.ScheduleEquipment(InventoryAndEHS.java:194)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.TestNG.privateMain(TestNG.java:1355)
+	at org.testng.TestNG.main(TestNG.java:1324)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@id=&apos;labs-sidebar&apos;]/div[3]&quot;}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 16:57:40&apos;
+System info: host: &apos;BNGLT-4T55T72&apos;, ip: &apos;10.68.108.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous6444248218952708141webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10770)
+	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/dprakash/AppData/Local/Temp/anonymous6444248218952708141webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:625)
+</pre></div></td>
+<td>45</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testScript.InventoryAndEHS.MessageValidationEquipmentsPage_Action()'><b>MessageValidationEquipmentsPage_Action</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-1947020920" onClick='toggleBox("Output-1947020920", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1947020920" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1947020920">
+Login to Application<br/>
+MouseOver to Inventory -> Equipment<br/>
+Verify Validation Message for Search Equipment not available<br/>
+Test Completed on Verifying Validation Message for Search Equipment not available<br/>
+Verify Validation Message for Equipment Name<br/>
+Test Completed on Verifying Validation Message for Equipment Name<br/>
+Logout of Application<br/>
+=====================<br/>
+</div>
+</td>
+<td></td>
+<td>56</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+<tr>
+<td title='testScript.InventoryAndEHS.SignIn()'><b>SignIn</b><br>Test class: testScript.InventoryAndEHS<br/>
+<a href="#Output-13803304" onClick='toggleBox("Output-13803304", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-13803304" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-13803304">
+Browser Launched<br/>
+Navigate to Login Screen<br/>
+Login to Application<br/>
+SignIn Successful<br/>
+Logout of Application<br/>
+=====================<br/>
+</div>
+</td>
+<td></td>
+<td>38</td>
+<td>testScript.InventoryAndEHS@2752f6e2</td></tr>
+</table><p>
+</body>
+</html>

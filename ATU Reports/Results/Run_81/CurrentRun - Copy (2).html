@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Current Run Reports</title>
+
+        <link rel="stylesheet" type="text/css" href="../../HTML_Design_Files/CSS/design.css" />
+        <link rel="stylesheet" type="text/css" href="../../HTML_Design_Files/CSS/jquery.jqplot.css" />
+
+        <script type="text/javascript" src="../../HTML_Design_Files/JS/jquery.min.js"></script>
+        <script type="text/javascript" src="../../HTML_Design_Files/JS/jquery.jqplot.min.js"></script>
+        <!--[if lt IE 9]>
+        <script language="javascript" type="text/javascript" src="../../HTML_Design_Files/JS/excanvas.js"></script>
+        <![endif]-->
+
+        <script language="javascript" type="text/javascript" src="../../HTML_Design_Files/JS/jqplot.pieRenderer.min.js"></script>
+        <script type="text/javascript" src="pieChart.js"></script>
+
+<script language="javascript" type="text/javascript">$(document).ready(function() { $(".video").hide();$("#showmenu").show(); $('#showmenu').click(function(){ $('.video').toggle("slide"); }); });</script><style>#showmenu{text-align:center; padding-top:350px;color: #585858; font-size: 14px;}#video{height: 550px;    margin-top: 5px;    width: 97%;    border-style: solid;    border-width: 1px;    border-color: #21ABCD;    /* Shadow for boxes */    -moz-box-shadow: 0 0 10px #CCCCCC;    -ms-box-shadow: 0 0 10px #CCCCCC;    -webkit-box-shadow: 0 0 10px #CCCCCC;    box-shadow: 0 0 10px #CCCCCC;    zoom: 1;    filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=0),        progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=90),        progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=180),        progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=2, Direction=270);    background-color: white;}</style><script language="javascript" type="text/javascript">
+$(document).ready(function() {
+	$('#tcFilter').on('change',function(){
+    if($(this).val()=='pass'){
+        $('.pass').show();
+		$('.fail').hide();
+		$('.skip').hide();
+		$('.config').hide();
+    }
+	if($(this).val()=='fail'){
+        $('.pass').hide();
+		$('.fail').show();
+		$('.skip').hide();
+		$('.config').hide();
+    }
+	
+	if($(this).val()=='skip'){
+        $('.pass').hide();
+		$('.fail').hide();
+		$('.skip').show();
+		$('.config').hide();
+    }
+	
+if($(this).val()=='tests'){ $('.pass').show(); $('.fail').show(); $('.skip').show(); $('.config').hide(); }	if($(this).val()=='config'){
+        $('.pass').hide();
+		$('.fail').hide();
+		$('.skip').hide();
+		$('.config').show();
+    }
+	
+	if($(this).val()=='all'){
+        $('.pass').show();
+		$('.fail').show();
+		$('.skip').show();
+		$('.config').show();
+    }
+  });
+});       
+</script>
+    </head>
+    <body>
+        <table id="mainTable">
+            <tr id="header" >
+                <td id="logo"><img src="../../HTML_Design_Files/IMG/atu.jpg" alt="Logo" height="70" width="140" /> <br/><i style="float:left;padding-left:20px;font-size:12px">Reflections of Visionary Minds</i></td>
+                <td id="headertext">
+                    ATU Graphical Reports for TestNG<div style="padding-right:20px;float:right"> </i></div></td>
+
+            </tr>
+
+            <tr id="container">
+                <td id="menu">
+                    <ul> 
+
+ <li class="menuStyle"><a href="../../index.html" >Index</a></li><li style="padding-top: 4px;"><a href="../ConsolidatedPage.html" >Consolidated Page</a></li>
+
+
+                    </ul>
+                </td>
+
+
+<td id="content">
+                    <div class="info">
+                        The following pie chart demonstrates the percentage of Passed, Failed and Skipped Test Cases<br/>
+                        Time Taken for Executing below Test Cases: <b>641 Sec</b> <br/>
+                        Current Run Number: <b>Run 81</b>
+                    </div>
+<div class="info"><br/><b>Run Description</b><br/><br/>Storage Management Movement</div>                    <div>
+                        <div class="chartStyle summary" style="width: 32%;background-color: #3B9C9C;">
+                            <b>Summary</b><br/><br/>
+                            <table>
+                            <tr>
+                                <td>Execution Date</td>
+                                <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                                <td>07-Feb-2017 08:44:00</td>
+                            </tr>
+                            <tr>
+                                <td>Total Test Cases</td>
+                                <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                                <td>24</td>
+                            </tr>
+                            <tr>
+                                <td>Passed</td>
+                                <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                                <td>24</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Failed</td>
+                                <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                                <td>0</td>
+                            </tr>
+
+                            <tr>
+                                <td>Skipped</td>
+                                <td>&nbsp;&nbsp;:&nbsp;&nbsp;</td>
+                                <td>0</td>
+                            </tr>
+                        </table> 
+                        </div>                        <div class="chartStyle" style="text-align: left;margin-left: 30px;float: left;width: 60%;">                        
+                            <div id="chart" style="height:300px;color:black;"></div>
+                        </div>
+                    </div>
+                    <div>
+
+<p id="showmenu">No Video Recording Available</p>
+<div style="float:left;  color: #585858; font-size: 14px;">	<select id="tcFilter" class="filter">
+						<option class="filterOption" value="all">All Methods</option>
+						<option class="filterOption" value="tests">Test Methods</option>
+						<option class="filterOption" value="pass">Passed Test Cases</option>
+						<option class="filterOption" value="fail">Failed Test Cases</option>
+						<option class="filterOption" value="skip">Skipped Test Cases</option>
+						<option class="filterOption" value="config">Configuration Methods</option>
+					</select>	Filter The Methods Based on Selection</div>
+                        <table id="tableStyle" class="chartStyle" style="height:50px; float: left">
+                            <tr>
+                                <th>Package Name</th>
+                                <th>Class Name</th>
+                                <th>Method Type</th>
+                                <th>Test Case Name</th>
+<th>Iteration</th>                                <th>Time</th>
+                                <th style="width: 7%">Status</th>
+                            </tr>
+
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario1_Iteration1\Scenario1.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario1_Iteration1\Scenario1.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario1_Iteration1\Scenario1.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario1_Iteration1\Scenario1.html">Scenario1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario1_Iteration1\Scenario1.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario1_Iteration1\Scenario1.html">86 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario2_Iteration1\Scenario2.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario2_Iteration1\Scenario2.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario2_Iteration1\Scenario2.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario2_Iteration1\Scenario2.html">Scenario2</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario2_Iteration1\Scenario2.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario2_Iteration1\Scenario2.html">85 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario4_Iteration1\Scenario4.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario4_Iteration1\Scenario4.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario4_Iteration1\Scenario4.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario4_Iteration1\Scenario4.html">Scenario4</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario4_Iteration1\Scenario4.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario4_Iteration1\Scenario4.html">69 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario5_Iteration1\Scenario5.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario5_Iteration1\Scenario5.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario5_Iteration1\Scenario5.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario5_Iteration1\Scenario5.html">Scenario5</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario5_Iteration1\Scenario5.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario5_Iteration1\Scenario5.html">68 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario6_Iteration1\Scenario6.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario6_Iteration1\Scenario6.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario6_Iteration1\Scenario6.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario6_Iteration1\Scenario6.html">Scenario6</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario6_Iteration1\Scenario6.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario6_Iteration1\Scenario6.html">74 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario7_Iteration1\Scenario7.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario7_Iteration1\Scenario7.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario7_Iteration1\Scenario7.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario7_Iteration1\Scenario7.html">Scenario7</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario7_Iteration1\Scenario7.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario7_Iteration1\Scenario7.html">69 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario8_Iteration1\Scenario8.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario8_Iteration1\Scenario8.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario8_Iteration1\Scenario8.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario8_Iteration1\Scenario8.html">Scenario8</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario8_Iteration1\Scenario8.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario8_Iteration1\Scenario8.html">68 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all fail">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario3_Iteration1\Scenario3.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario3_Iteration1\Scenario3.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario3_Iteration1\Scenario3.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario3_Iteration1\Scenario3.html">Scenario3</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario3_Iteration1\Scenario3.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario3_Iteration1\Scenario3.html">64 Sec</a></td>
+                                <td><img  style="border: none;width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all fail">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario9_Iteration1\Scenario9.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario9_Iteration1\Scenario9.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario9_Iteration1\Scenario9.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario9_Iteration1\Scenario9.html">Scenario9</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario9_Iteration1\Scenario9.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario9_Iteration1\Scenario9.html">54 Sec</a></td>
+                                <td><img  style="border: none;width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all fail">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario10_Iteration1\Scenario10.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario10_Iteration1\Scenario10.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario10_Iteration1\Scenario10.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario10_Iteration1\Scenario10.html">Scenario10</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario10_Iteration1\Scenario10.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario10_Iteration1\Scenario10.html">82 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario11_Iteration1\Scenario11.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario11_Iteration1\Scenario11.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario11_Iteration1\Scenario11.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario11_Iteration1\Scenario11.html">Scenario11</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario11_Iteration1\Scenario11.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario11_Iteration1\Scenario11.html">60 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario12_Iteration1\Scenario12.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario12_Iteration1\Scenario12.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario12_Iteration1\Scenario12.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario12_Iteration1\Scenario12.html">Scenario12</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario12_Iteration1\Scenario12.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario12_Iteration1\Scenario12.html">61 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario13_Iteration1\Scenario13.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario13_Iteration1\Scenario13.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario13_Iteration1\Scenario13.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario13_Iteration1\Scenario13.html">Scenario13</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario13_Iteration1\Scenario13.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario13_Iteration1\Scenario13.html">85 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario14_Iteration1\Scenario14.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario14_Iteration1\Scenario14.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario14_Iteration1\Scenario14.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario14_Iteration1\Scenario14.html">Scenario14</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario14_Iteration1\Scenario14.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario14_Iteration1\Scenario14.html">59 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario15_Iteration1\Scenario15.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario15_Iteration1\Scenario15.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario15_Iteration1\Scenario15.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario15_Iteration1\Scenario15.html">Scenario15</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario15_Iteration1\Scenario15.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario15_Iteration1\Scenario15.html">61 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario16_Iteration1\Scenario16.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario16_Iteration1\Scenario16.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario16_Iteration1\Scenario16.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario16_Iteration1\Scenario16.html">Scenario16</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario16_Iteration1\Scenario16.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario16_Iteration1\Scenario16.html">67 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario17_Iteration1\Scenario17.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario17_Iteration1\Scenario17.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario17_Iteration1\Scenario17.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario17_Iteration1\Scenario17.html">Scenario17</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario17_Iteration1\Scenario17.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario17_Iteration1\Scenario17.html">82 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario18_Iteration1\Scenario18.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario18_Iteration1\Scenario18.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario18_Iteration1\Scenario18.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario18_Iteration1\Scenario18.html">Scenario18</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario18_Iteration1\Scenario18.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario18_Iteration1\Scenario18.html">70 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario19_Iteration1\Scenario19.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario19_Iteration1\Scenario19.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario19_Iteration1\Scenario19.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario19_Iteration1\Scenario19.html">Scenario19</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario19_Iteration1\Scenario19.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario19_Iteration1\Scenario19.html">72 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario20_Iteration1\Scenario20.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario20_Iteration1\Scenario20.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario20_Iteration1\Scenario20.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario20_Iteration1\Scenario20.html">Scenario20</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario20_Iteration1\Scenario20.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario20_Iteration1\Scenario20.html">60 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario21_24_Iteration1\Scenario21_24.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario21_24_Iteration1\Scenario21_24.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario21_24_Iteration1\Scenario21_24.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario21_24_Iteration1\Scenario21_24.html">Scenario21_24</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario21_24_Iteration1\Scenario21_24.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario21_24_Iteration1\Scenario21_24.html">208 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario25_Iteration1\Scenario25.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario25_Iteration1\Scenario25.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario25_Iteration1\Scenario25.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario25_Iteration1\Scenario25.html">Scenario25</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario25_Iteration1\Scenario25.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario25_Iteration1\Scenario25.html">78 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all pass">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario26_27_Iteration1\Scenario26_27.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario26_27_Iteration1\Scenario26_27.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario26_27_Iteration1\Scenario26_27.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario26_27_Iteration1\Scenario26_27.html">Scenario26_27</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario26_27_Iteration1\Scenario26_27.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario26_27_Iteration1\Scenario26_27.html">94 Sec</a></td>
+                                <td><img  style="border: none; width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                            <tr class="all fail">
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario28_29_Iteration1\Scenario28_29.html">testScript</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario28_29_Iteration1\Scenario28_29.html">StorageMovement</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario28_29_Iteration1\Scenario28_29.html">Test Method</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario28_29_Iteration1\Scenario28_29.html">Scenario28_29</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario28_29_Iteration1\Scenario28_29.html">1</a></td>
+                                <td><a href="Automation regression test for Inventory module\Inventory Regression Test\testScript\StorageMovement\Scenario28_29_Iteration1\Scenario28_29.html">125 Sec</a></td>
+                                <td><img  style="border: none;width: 25px" src="../../HTML_Design_Files/IMG/pass.png"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>            <tr id="footer">
+                <td colspan="2">
+                    Best Viewed in &nbsp;
+                    <a href="http://www.mozilla.org/en-US/firefox/new/">Firefox</a> &nbsp;
+                    <a href="http://www.apple.com/in/safari/">Safari</a>&nbsp;
+                    <a href="http://www.google.com/chrome/">Chrome</a>&nbsp;
+                    <a href="http://windows.microsoft.com/en-IN/internet-explorer/download-ie">IE 9 & Above</a>&nbsp;
+                    &nbsp;
+ATU Reporter Version: v2.1                    &nbsp;
+                    Reports by: <a href="http://automationtestingutilities.blogspot.in/">Automation Testing Utilities</a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

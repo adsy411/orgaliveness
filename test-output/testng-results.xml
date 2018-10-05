@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[Login to application as Lab owner]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to Project list]]>
+    </line>
+    <line>
+      <![CDATA[Create new project]]>
+    </line>
+    <line>
+      <![CDATA[Verify created project in project list]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application as Lab owner]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to Project list]]>
+    </line>
+    <line>
+      <![CDATA[Create new project]]>
+    </line>
+    <line>
+      <![CDATA[Verify created project in project list]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Edit project description]]>
+    </line>
+    <line>
+      <![CDATA[Validate edited project description]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Add notes to project with title and description]]>
+    </line>
+    <line>
+      <![CDATA[Verify note title and description]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Edit project notes from project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Delete project notes from project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Add attachment to project]]>
+    </line>
+    <line>
+      <![CDATA[Validation of added attachment]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project detail page]]>
+    </line>
+    <line>
+      <![CDATA[Assign code to experiment]]>
+    </line>
+    <line>
+      <![CDATA[Verify code assigned to the project]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list page]]>
+    </line>
+    <line>
+      <![CDATA[Verify project list default view]]>
+    </line>
+    <line>
+      <![CDATA[Switch to List view]]>
+    </line>
+    <line>
+      <![CDATA[Validate project list view after switching to list view]]>
+    </line>
+    <line>
+      <![CDATA[Switch to Card view]]>
+    </line>
+    <line>
+      <![CDATA[Validate project list view after switching to card view]]>
+    </line>
+    <line>
+      <![CDATA[Logout from application]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list page]]>
+    </line>
+    <line>
+      <![CDATA[Filter project list by project creator]]>
+    </line>
+    <line>
+      <![CDATA[Enter project list filter criteria and apply filter]]>
+    </line>
+    <line>
+      <![CDATA[Validation of project list based on applied filter "Filter by creator"]]>
+    </line>
+    <line>
+      <![CDATA[Filter project list by date range]]>
+    </line>
+    <line>
+      <![CDATA[Filter project list by project status]]>
+    </line>
+    <line>
+      <![CDATA[Logout from application]]>
+    </line>
+    <line>
+      <![CDATA[Get download path of the system]]>
+    </line>
+    <line>
+      <![CDATA[Delete Old file from the system]]>
+    </line>
+    <line>
+      <![CDATA[Login to application]]>
+    </line>
+    <line>
+      <![CDATA[Navigate to project list page]]>
+    </line>
+    <line>
+      <![CDATA[Download project list]]>
+    </line>
+    <line>
+      <![CDATA[Verify downloaded project list]]>
+    </line>
+    <line>
+      <![CDATA[Verify projects with downloaded project list excel file]]>
+    </line>
+    <line>
+      <![CDATA[Click on User Settings and logout]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2018-09-27T12:29:58Z" name="Research Automation Testing Release 1.19" finished-at="2018-09-27T12:38:35Z" duration-ms="516479">
+    <groups>
+    </groups>
+    <test started-at="2018-09-27T12:29:58Z" name="TestNG Test Group" finished-at="2018-09-27T12:38:35Z" duration-ms="516479">
+      <class name="testScript.Project_Scenarios">
+        <test-method signature="CreateProjectWithScopeAsLab()[pri:1, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:29:58Z" name="CreateProjectWithScopeAsLab" finished-at="2018-09-27T08:30:42Z" duration-ms="43971" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application as Lab owner]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to Project list]]>
+            </line>
+            <line>
+              <![CDATA[Create new project]]>
+            </line>
+            <line>
+              <![CDATA[Verify created project in project list]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateProjectWithScopeAsLab -->
+        <test-method signature="CreateProjectWithScopeAsRestricted()[pri:2, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:30:42Z" name="CreateProjectWithScopeAsRestricted" finished-at="2018-09-27T08:31:20Z" duration-ms="37885" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application as Lab owner]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to Project list]]>
+            </line>
+            <line>
+              <![CDATA[Create new project]]>
+            </line>
+            <line>
+              <![CDATA[Verify created project in project list]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- CreateProjectWithScopeAsRestricted -->
+        <test-method signature="EditProjectDescription()[pri:3, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:31:20Z" name="EditProjectDescription" finished-at="2018-09-27T08:32:10Z" duration-ms="49871" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Edit project description]]>
+            </line>
+            <line>
+              <![CDATA[Validate edited project description]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- EditProjectDescription -->
+        <test-method signature="AddProjectNotes()[pri:4, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:32:10Z" name="AddProjectNotes" finished-at="2018-09-27T08:32:55Z" duration-ms="45316" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Add notes to project with title and description]]>
+            </line>
+            <line>
+              <![CDATA[Verify note title and description]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddProjectNotes -->
+        <test-method signature="EditProjectNotes()[pri:5, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:32:55Z" name="EditProjectNotes" finished-at="2018-09-27T08:33:45Z" duration-ms="49662" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Edit project notes from project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- EditProjectNotes -->
+        <test-method signature="DeleteProjectNotes()[pri:6, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:33:45Z" name="DeleteProjectNotes" finished-at="2018-09-27T08:34:43Z" duration-ms="58347" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Delete project notes from project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- DeleteProjectNotes -->
+        <test-method signature="AddProjectAttachment()[pri:7, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:34:43Z" name="AddProjectAttachment" finished-at="2018-09-27T08:35:24Z" duration-ms="41133" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Add attachment to project]]>
+            </line>
+            <line>
+              <![CDATA[Validation of added attachment]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AddProjectAttachment -->
+        <test-method signature="AssignCodeToProject()[pri:8, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:35:24Z" name="AssignCodeToProject" finished-at="2018-09-27T08:35:57Z" duration-ms="32303" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project detail page]]>
+            </line>
+            <line>
+              <![CDATA[Assign code to experiment]]>
+            </line>
+            <line>
+              <![CDATA[Verify code assigned to the project]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- AssignCodeToProject -->
+        <test-method signature="ProjectList_SwitchView()[pri:9, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:35:57Z" name="ProjectList_SwitchView" finished-at="2018-09-27T08:36:29Z" duration-ms="32655" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list page]]>
+            </line>
+            <line>
+              <![CDATA[Verify project list default view]]>
+            </line>
+            <line>
+              <![CDATA[Switch to List view]]>
+            </line>
+            <line>
+              <![CDATA[Validate project list view after switching to list view]]>
+            </line>
+            <line>
+              <![CDATA[Switch to Card view]]>
+            </line>
+            <line>
+              <![CDATA[Validate project list view after switching to card view]]>
+            </line>
+            <line>
+              <![CDATA[Logout from application]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- ProjectList_SwitchView -->
+        <test-method signature="FilterProjectList_ByCreator_ByDateRange_ByStatus()[pri:10, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:36:29Z" name="FilterProjectList_ByCreator_ByDateRange_ByStatus" finished-at="2018-09-27T08:37:36Z" duration-ms="66286" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list page]]>
+            </line>
+            <line>
+              <![CDATA[Filter project list by project creator]]>
+            </line>
+            <line>
+              <![CDATA[Enter project list filter criteria and apply filter]]>
+            </line>
+            <line>
+              <![CDATA[Validation of project list based on applied filter "Filter by creator"]]>
+            </line>
+            <line>
+              <![CDATA[Filter project list by date range]]>
+            </line>
+            <line>
+              <![CDATA[Filter project list by project status]]>
+            </line>
+            <line>
+              <![CDATA[Logout from application]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- FilterProjectList_ByCreator_ByDateRange_ByStatus -->
+        <test-method signature="DownloadProjectList()[pri:11, instance:testScript.Project_Scenarios@1caa0244]" started-at="2018-09-27T08:37:36Z" name="DownloadProjectList" finished-at="2018-09-27T08:38:35Z" duration-ms="58995" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Get download path of the system]]>
+            </line>
+            <line>
+              <![CDATA[Delete Old file from the system]]>
+            </line>
+            <line>
+              <![CDATA[Login to application]]>
+            </line>
+            <line>
+              <![CDATA[Navigate to project list page]]>
+            </line>
+            <line>
+              <![CDATA[Download project list]]>
+            </line>
+            <line>
+              <![CDATA[Verify downloaded project list]]>
+            </line>
+            <line>
+              <![CDATA[Verify projects with downloaded project list excel file]]>
+            </line>
+            <line>
+              <![CDATA[Click on User Settings and logout]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- DownloadProjectList -->
+      </class> <!-- testScript.Project_Scenarios -->
+    </test> <!-- TestNG Test Group -->
+  </suite> <!-- Research Automation Testing Release 1.19 -->
+</testng-results>

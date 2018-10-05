@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="5" name="Failed suite [Failed suite [Platform Automation Testing Release]]">
+  <parameter name="appURL" value="https://ae1c-bioinfocloud-slb01/auth/"/>
+  <parameter name="browserType" value="chrome"/>
+  <listeners>
+    <listener class-name="customListener.TestNGCustomReportListener"/>
+  </listeners>
+  <test name="TestNG Test Group(failed)(failed)">
+    <classes>
+      <class name="testScript.Platform">
+        <methods>
+          <include name="ContactUs"/>
+        </methods>
+      </class> <!-- testScript.Platform -->
+    </classes>
+  </test> <!-- TestNG Test Group(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Platform Automation Testing Release]] -->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Sanity]">
+  <listeners>
+    <listener class-name="customListener.TestNGCustomReportListener"/>
+  </listeners>
+  <test name="TestNG Test Group(failed)">
+    <classes>
+      <class name="testScript.Platform">
+        <methods>
+          <include name="ChangePassword"/>
+        </methods>
+      </class> <!-- testScript.Platform -->
+    </classes>
+  </test> <!-- TestNG Test Group(failed) -->
+</suite> <!-- Failed suite [Sanity] -->
